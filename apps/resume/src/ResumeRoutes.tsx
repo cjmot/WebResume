@@ -1,9 +1,11 @@
 import HomePage from './routes/HomePage'
-import { Routes, Route } from 'react-router-dom';
-import ModuleFederationWrapper from "./components/ModuleFederationWrapper";
-import federatedImport from "./components/FederatedImport";
+import { Routes, Route } from 'react-router-dom'
+import ModuleFederationWrapper from './components/ModuleFederationWrapper'
+import federatedImport from './components/FederatedImport'
 
 const SkillsRoutes = await federatedImport(import('skills/SkillsRoutes'))
+const ProjectsRoutes = await federatedImport(import('projects/ProjectsRoutes'))
+
 
 export default function ResumeRoutes() {
     return (
@@ -14,6 +16,11 @@ export default function ResumeRoutes() {
                 <Route path='/skills/*' element={
                     <ModuleFederationWrapper>
                         <SkillsRoutes />
+                    </ModuleFederationWrapper>
+                } />
+                <Route path='/projects/*' element={
+                    <ModuleFederationWrapper>
+                        <ProjectsRoutes />
                     </ModuleFederationWrapper>
                 } />
             </Routes>

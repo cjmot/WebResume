@@ -7,8 +7,9 @@ export default function Header() {
                 <div className='w-1/2 flex flex-row items-center'>
                     <a href='/' className='text-xl font-semibold'>Home</a>
                 </div>
-                <div className='w-1/2 flex flex-row items-center justify-end'>
+                <div className='w-1/2 flex flex-row items-center justify-end space-x-4'>
                     <a href='/skills' className='text-lg hover:underline underline-offset-2'>Skills</a>
+                    <a href='/projects' className='text-lg hover:underline underline-offset-2'>Projects</a>
                 </div>
             </div>
             <hr className='w-full border-t-2' />
