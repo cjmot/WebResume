@@ -7,13 +7,13 @@ export default defineConfig({
     plugins: [
         react(),
         federation({
-            name: 'skills',
+            name: 'kingsland',
             filename: 'remoteEntry.js',
             exposes: {
-                './ProjectsRoutes': './src/ProjectsRoutes.tsx',
+                './KingslandRoutes': './src/KingslandRoutes.tsx',
             },
             shared: ['react', 'react-dom', 'react-router-dom'],
-        })
+        }),
     ],
     build: {
         modulePreload: false,
