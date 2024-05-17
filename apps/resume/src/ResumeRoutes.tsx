@@ -5,7 +5,6 @@ import federatedImport from './components/FederatedImport'
 
 const SkillsRoutes = await federatedImport(import('skills/SkillsRoutes'))
 const ProjectsRoutes = await federatedImport(import('projects/ProjectsRoutes'))
-const KingslandRoutes = await federatedImport(import('kingsland/KingslandRoutes'))
 
 
 export default function ResumeRoutes() {
@@ -22,11 +21,6 @@ export default function ResumeRoutes() {
                 <Route path='/projects/*' element={
                     <ModuleFederationWrapper>
                         <ProjectsRoutes />
-                    </ModuleFederationWrapper>
-                } />
-                <Route path='/kingsland/*' element={
-                    <ModuleFederationWrapper>
-                        <KingslandRoutes />
                     </ModuleFederationWrapper>
                 } />
             </Routes>

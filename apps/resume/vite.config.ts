@@ -11,7 +11,6 @@ export default defineConfig({
             remotes: {
                 skills: 'http://localhost:3110/assets/remoteEntry.js',
                 projects: 'http://localhost:3111/assets/remoteEntry.js',
-                kingsland: 'http://localhost:3112/assets/remoteEntry.js',
             },
             shared: ['react', 'react-dom', 'react-router-dom'],
         })
