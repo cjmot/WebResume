@@ -4,6 +4,9 @@
   "scripts": {
     "build": "turbo build",
     "dev": "turbo dev",
+    "dev:resume": "turbo dev --filter=resume",
+    "live:remotes": "turbo live --filter=./apps/* --filter=!resume",
+    "dev:kingsland-server": "turbo dev --filter=kingsland-server",
     "lint": "turbo lint",
     "format": "prettier --write \"**/*.{ts,tsx,md}\""
   },
