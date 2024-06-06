@@ -9,5 +9,5 @@ export default function SkillsRoutes() {
                 <Route index path='/' element={<HomePage />} />
             </Routes>
         </>
-    )
+    );
 }

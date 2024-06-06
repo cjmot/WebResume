@@ -9,8 +9,9 @@ export default defineConfig({
         federation({
             name: 'host',
             remotes: {
-                skills: 'http://localhost:3110/assets/remoteEntry.js',
-                projects: 'http://localhost:3111/assets/remoteEntry.js',
+                skills: 'http://localhost:3010/assets/remoteEntry.js',
+                projects: 'http://localhost:3020/assets/remoteEntry.js',
+                kingsland: 'http://localhost:3030/assets/remoteEntry.js',
             },
             shared: ['react', 'react-dom', 'react-router-dom'],
         })
