@@ -1,9 +1,11 @@
-import HomePage from './routes/HomePage'
+import HomePage from './routes/HomePage';
 import { Routes, Route } from 'react-router-dom';
-import ModuleFederationWrapper from "./components/ModuleFederationWrapper";
-import federatedImport from "./components/FederatedImport";
+import ModuleFederationWrapper from './components/ModuleFederationWrapper';
+import federatedImport from './components/FederatedImport';
 
-const SkillsRoutes = await federatedImport(import('skills/SkillsRoutes'))
+const SkillsApp = await federatedImport(import('skills/SkillsRoutes'));
+const ProjectsApp = await federatedImport(import('projects/ProjectsRoutes'));
+const KingslandApp = await federatedImport(import('kingsland/KingslandRoutes'));
 
 export default function ResumeRoutes() {
     return (
@@ -13,7 +15,17 @@ export default function ResumeRoutes() {
                 <Route path='/resume' element={<HomePage />} />
                 <Route path='/skills/*' element={
                     <ModuleFederationWrapper>
-                        <SkillsRoutes />
+                        <SkillsApp />
+                    </ModuleFederationWrapper>
+                } />
+                <Route path='/projects/*' element={
+                    <ModuleFederationWrapper>
+                        <ProjectsApp />
+                    </ModuleFederationWrapper>
+                } />
+                <Route path='/kingsland/*' element={
+                    <ModuleFederationWrapper>
+                        <KingslandApp />
                     </ModuleFederationWrapper>
                 } />
             </Routes>

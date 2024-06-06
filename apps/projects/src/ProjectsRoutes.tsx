@@ -1,13 +1,13 @@
 import { Routes, Route } from 'react-router-dom'
 import HomePage from './routes/HomePage'
 
-export default function SkillsRoutes() {
+export default function ProjectsRoutes() {
 
     return (
         <>
             <Routes>
-                <Route index path='/' element={<HomePage />} />
+                <Route path='/' element={<HomePage />}/>
             </Routes>
         </>
-    );
+    )
 }

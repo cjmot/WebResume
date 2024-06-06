@@ -1,16 +1,16 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
-import federation from "@originjs/vite-plugin-federation";
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
+import federation from '@originjs/vite-plugin-federation';
 
 // https://vitejs.dev/config/
 export default defineConfig({
     plugins: [
         react(),
         federation({
-            name: 'skills',
+            name: 'kingsland',
             filename: 'remoteEntry.js',
             exposes: {
-                './SkillsRoutes': './src/SkillsRoutes.tsx',
+              './KingslandRoutes': './src/KingslandRoutes.tsx',
             },
             shared: ['react', 'react-dom', 'react-router-dom'],
         })
@@ -21,4 +21,4 @@ export default defineConfig({
         minify: false,
         cssCodeSplit: false
     },
-})
+});
