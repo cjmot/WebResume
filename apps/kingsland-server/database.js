@@ -18,16 +18,16 @@ const cartCollection = db.collection('cart');
     process.exit(1);
 })
 
-function getUser(email){
-    return userCollection.findOne({ email: email });
+function getUser(userName){
+    return userCollection.findOne({ userName: userName });
 }
 
 function getUserByToken(token) {
     return userCollection.findOne({ token: token });
 }
 
-async function createUser(email, password) {
-    const existingUser = await getUser(email);
+async function createUser(userName, password) {
+    const existingUser = await getUser(userName);
     if (existingUser) {
         throw new Error('User with this email already exists');
     }
@@ -35,9 +35,9 @@ async function createUser(email, password) {
     const passwordHash = await bcrypt.hash(password, 10);
 
     const user = {
-        email: email,
+        userName: userName,
         password: passwordHash,
-        token: uuid.v4(),
+        userId: uuid.v4(),
     };
     await userCollection.insertOne(user).then(() => {
         return user;

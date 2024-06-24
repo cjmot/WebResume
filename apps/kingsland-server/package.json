@@ -1,5 +1,5 @@
 {
-  "name": "kingsland-service",
+  "name": "kingsland-server",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -14,6 +14,7 @@
     "express": "^4.18.3",
     "mongodb": "^6.5.0",
     "uuid": "^9.0.1",
-    "ws": "^8.16.0"
+    "ws": "^8.16.0",
+    "cors": "^2.8.5"
   }
 }

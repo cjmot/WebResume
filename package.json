@@ -5,8 +5,10 @@
     "build": "turbo build",
     "dev": "turbo dev",
     "dev:resume": "turbo dev --filter=resume",
-    "live:remotes": "turbo live --filter=./apps/* --filter=!resume",
+    "dev:kingsland": "turbo dev --filter=kingsland",
     "dev:kingsland-server": "turbo dev --filter=kingsland-server",
+    "live:remotes": "turbo live --filter=./apps/* --filter=!resume",
+    "live:kingsland": "turbo live --filter=kingsland",
     "lint": "turbo lint",
     "format": "prettier --write \"**/*.{ts,tsx,md}\""
   },
@@ -23,5 +25,8 @@
   "workspaces": [
     "apps/*",
     "packages/*"
-  ]
+  ],
+  "dependencies": {
+    "cors": "^2.8.5"
+  }
 }

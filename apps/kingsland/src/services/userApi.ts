@@ -8,17 +8,20 @@ export const userApi = {
         const attemptNumber = attempting.length;
         axios({
             method: 'get',
-            url: '/kingsland/user',
+            url: '/kingsland/auth/login',
             baseURL: 'http://localhost:3031',
+            data: {
+                userName: 'test'
+            }
         })
             .then((res) => {
                 attempting[attemptNumber - 1] = false;
-                const uid = res?.data?.userId || '';
-                const lUid = localStorage.getItem('uid');
-                if (lUid && lUid !== lUid) {
+                const unm = res?.data?.userName || '';
+                const lUnm = localStorage.getItem('unm');
+                if (lUnm && lUnm !== unm) {
                     localStorage.clear();
                 }
-                localStorage.setItem('uid', uid);
+                localStorage.setItem('uid', unm);
                 callBack(res);
             })
             .catch((e) => {
