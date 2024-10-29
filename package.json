@@ -5,11 +5,6 @@
     "build": "turbo build",
     "dev": "turbo dev",
     "dev:resume": "turbo dev --filter=resume",
-    "dev:kingsland": "turbo dev --filter=kingsland",
-    "dev:kingsland-server": "dotenv -- turbo dev --filter=kingsland-server",
-    "dev:servers": "dotenv -- turbo dev --filter=./apps/*-server --concurrency=100%",
-    "live:remotes": "dotenv -- turbo live --filter=./apps/* --filter=!resume",
-    "live:kingsland": "turbo live --filter=kingsland",
     "lint": "turbo lint",
     "format": "prettier --write \"**/*.{ts,tsx,md}\""
   },
