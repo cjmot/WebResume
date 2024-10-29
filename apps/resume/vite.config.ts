@@ -1,6 +1,9 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import federation from "@originjs/vite-plugin-federation";
+import dotenv from "dotenv";
+
+const env = dotenv.config({ path: '../../.env'});
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -9,9 +12,7 @@ export default defineConfig({
         federation({
             name: 'host',
             remotes: {
-                skills: 'http://localhost:3010/assets/remoteEntry.js',
-                projects: 'http://localhost:3020/assets/remoteEntry.js',
-                kingsland: 'http://localhost:3030/assets/remoteEntry.js',
+                kingsland: `${env.parsed?.VITE_KINGSLAND_URL}/assets/remoteEntry.js`,
             },
             shared: ['react', 'react-dom', 'react-router-dom'],
         })

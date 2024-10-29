@@ -1,9 +1,10 @@
-const cookieParser = require('cookie-parser');
-const bcrypt = require('bcrypt');
-const express = require('express');
-const DB = require('./database.js');
-const { peerProxy } = require('./peerProxy.js');
-const cors = require('cors');
+import cookieParser from 'cookie-parser';
+import * as bcrypt from 'bcrypt';
+import express from 'express';
+import DB from './database';
+import peerProxy from './peerProxy';
+import cors from 'cors';
+import { User } from './types'
 
 const kingslandExp = express();
 
@@ -32,13 +33,9 @@ kingslandExp.use('/kingsland', apiRouter);
 
 // CreateAuth token for a new user
 apiRouter.post('/auth/create', async (req, res) =>{
-    DB.createUser(req.body.userName, req.body.password)
-        .then(user => {
-            setAuthCookie(res, user.userId)
-            return res.send(user);})
-        .catch(error => {
-            return res.status(409).send(error);
-        });
+    const user: User = await DB.createUser(req.body.userName, req.body.password)
+    setAuthCookie(res, user.userId)
+    return res.send(user);
 
 });
 
@@ -66,7 +63,7 @@ apiRouter.get('/user/:userId', async (req, res) => {
     if (user) {
         const userId = req?.cookies.userId;
         return res.send({
-            userId: user.userId,
+            userId: userId,
             userName: user.userName,
             email: user.email,
         });
@@ -78,7 +75,7 @@ const secureApiRouter = express.Router();
 apiRouter.use(secureApiRouter);
 
 secureApiRouter.use(async (req, res, next) => {
-    authToken = req.cookies[authCookieName];
+    const authToken = req.cookies[authCookieName];
     const user = await DB.getUserByToken(authToken);
     if (user) {
         return next();
@@ -130,7 +127,7 @@ kingslandExp.use((_req, res) => {
     return res.sendFile('index.html', { root: 'public' });
 });
 
-function setAuthCookie(res, authToken) {
+function setAuthCookie(res: any, authToken: any) {
     res.cookie(authCookieName, authToken, {
         secure: true,
         httpOnly: true,

@@ -1,19 +1,19 @@
-const { WebSocketServer } = require('ws');
-const uuid = require('uuid');
+import { WebSocketServer } from 'ws';
+import uuid from 'uuid';
 
-function peerProxy(httpServer) {
+export default function peerProxy(httpServer: any) {
     // Create a websocket object
     const wss = new WebSocketServer({ noServer: true });
 
     // Handle the protocol upgrade from HTTP to WebSocket
-    httpServer.on('upgrade', (request, socket, head) => {
+    httpServer.on('upgrade', (request: any, socket: any, head: any) => {
         wss.handleUpgrade(request, socket, head, function done(ws) {
             wss.emit('connection', ws, request);
         });
     });
 
     // Keep track of all the connections so we can forward messages
-    let connections = [];
+    const connections: {id?: string; alive: boolean; ws: any}[] = [];
 
     wss.on('connection', (ws) => {
         const connection = {id: uuid.v4(), alive: true, ws: ws};
@@ -30,7 +30,7 @@ function peerProxy(httpServer) {
 
         // Remove the closed connection so we don't try to forward anymore
         ws.on('close', () => {
-            const pos = connections.findIndex((o, i) => o.id === connection.id);
+            const pos = connections.findIndex((o) => o.id === connection.id);
 
             if (pos >= 0) {
                 connections.splice(pos, 1);
@@ -56,5 +56,3 @@ function peerProxy(httpServer) {
         })
     }, 1000);
 }
-
-module.exports = { peerProxy };

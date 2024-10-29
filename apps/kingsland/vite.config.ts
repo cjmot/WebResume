@@ -1,6 +1,9 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import federation from '@originjs/vite-plugin-federation';
+import dotenv from 'dotenv';
+
+const env = dotenv.config({ path: '../../.env'});
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -23,9 +26,9 @@ export default defineConfig({
     },
     server: {
         proxy: {
-            '/api': 'http://localhost:4000',
+            '/api': env.parsed?.VITE_KINGSLAND_SERVER_URL || '',
             '/ws': {
-                target: 'ws://localhost:4000',
+                target: env.parsed?.VITE_KINGSLAND_SERVER_WEBSOCKET_URL,
                 ws: true,
             },
         },

@@ -1,5 +1,5 @@
-import { Routes, Route } from 'react-router-dom'
-import Login from './routes/Login'
+import { Routes, Route } from 'react-router-dom';
+import Login from './routes/Login';
 import CreateAccount from './routes/CreateAccount';
 import About from './routes/About';
 import Cart from './routes/Cart';
@@ -27,14 +27,16 @@ export default function KingslandRoutes() {
         <StoreProvider >
             <Header/>
                 <Routes>
-                    <Route index path='/' element={<Login/>}/>
-                    <Route path='/login' element={<Login/>}/>
-                    <Route path='/create_account' element={<CreateAccount/>}/>
-                    <Route path='/about' element={<About/>}/>
-                    <Route path='/cart' element={<Cart/>}/>
-                    <Route path='/checkout' element={<Checkout/>}/>
-                    <Route path='/shop' element={<Shop/>}/>
-                    <Route path='/profile' element={<Profile/>}/>
+                    <Route path='/kingsland' element={<Login />}>
+                        <Route index path='/' element={<Login/>}/>
+                        <Route path='/login' element={<Login/>}/>
+                        <Route path='/create_account' element={<CreateAccount/>}/>
+                        <Route path='/about' element={<About/>}/>
+                        <Route path='/cart' element={<Cart/>}/>
+                        <Route path='/checkout' element={<Checkout/>}/>
+                        <Route path='/shop' element={<Shop/>}/>
+                        <Route path='/profile' element={<Profile/>}/>
+                    </Route>
                 </Routes>
             <Footer/>
         </StoreProvider>
