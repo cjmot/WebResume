@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { CartItem } from '../typings';
+import { CartItem } from '../modules';
 
 export const cartApi = {
     getCartItems(callBack: (data: any) => any) {

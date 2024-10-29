@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { cartApi } from '../services/cartApi.ts';
-import { CartItem } from '../typings';
+import { CartItem } from '../modules';
 
 const useCart = () => {
 
