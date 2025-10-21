@@ -1,13 +1,13 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Header from './components/Header';
-import Footer from './components/Footer';
+import Header from './components/home/Header.tsx';
+import Footer from './components/home/Footer.tsx';
 import HomePage from './routes/HomePage';
 import ExperiencePage from './routes/ExperiencePage';
 import ProjectsPage from './routes/ProjectsPage';
-import ProjectDescription from './components/ProjectDescription';
+import ProjectDescription from './components/projects/ProjectDescription.tsx';
 import {projects} from './data/projects';
 import {experiences} from './data/experiences';
-import ExperienceDescription from "./components/ExperienceDescription";
+import ExperienceDescription from "./components/experience/ExperienceDescription.tsx";
 
 export default function App() {
 
@@ -15,7 +15,7 @@ export default function App() {
         <Router>
             <div className="flex flex-col flex-grow h-screen max-w-screen">
                 <Header />
-                <div className="h-full self-center flex-grow max-w-4xl overflow-hidden">
+                <div className="h-full max-w-3/4 self-center overflow-hidden">
                     <Routes>
                         <Route path="/" element={<HomePage />} />
                         <Route path="/experience" element={<ExperiencePage />} />

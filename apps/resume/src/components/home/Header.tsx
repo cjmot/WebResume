@@ -15,11 +15,11 @@ export default function Header() {
             <nav className="max-w-4xl mx-auto flex items-center justify-between font-semibold">
                 {!menuOpen && (
                     <>
-                        <button onClick={() => navigate('/')} className="text-2xl font-bold">My Portfolio</button>
+                        <button onClick={() => navigate('/')} className="text-2xl font-bold">Cooper Motyer</button>
                         <ul className="hidden md:flex items-center">
                             <li>
                                 <a
-                                    href="/"
+                                    href="/apps/resume/public"
                                     className=" hover:underline hover:text-white"
                                 >
                                     About

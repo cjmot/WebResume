@@ -1,22 +1,22 @@
-export const experiences: {name: string; description: string; route: string;}[] = [
+import { Experience } from '../types.ts'
+
+export const experiences: Experience[] = [
     {
-        name: 'Javascript, TypeScript, React, Express',
-        description: 'A full-stack shopping website built with Javascript, react, and express, made for CS 260 at BYU.',
-        route: 'code'
+        name: 'Kingsland',
+        description: 'A full-stack shopping website built with Javascript, react, and a backend express, made for CS 260 at BYU.',
+        route: 'kingsland',
+        link: 'https://github.com/cjmot/startup'
     },
     {
-        name: 'Python, React, Express, Spark',
-        description: 'A Python object-based roguelike game with a leveling system.',
-        route: 'packages'
-    },
-    {
-        name: 'Data types',
+        name: 'Chess',
         description: 'Full-Stack java CLI application made for CS 240 at BYU.',
-        route: 'data-types'
+        route: 'chess',
+        link: 'https://github.com/cjmot/chess'
     },
     {
-        name: 'Other portfolio',
-        description: 'Some random things I wanted to add to my website.',
-        route: 'random'
+        name: 'This Website',
+        description: 'A frontend Vite web app built with Typescript React, tailwind for styling, and a turborepo structure for scalability.',
+        route: 'WebResume',
+        link: 'https://github.com/cjmot/WebResume'
     },
 ];
