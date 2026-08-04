@@ -25,20 +25,6 @@ export default function AboutPage() {
                         {paragraph}
                     </p>
                 ))}
-                <div className="grid gap-4 pt-4 sm:grid-cols-2">
-                    <div className="rounded border border-slate-200 bg-white p-5 shadow-sm">
-                        <h3 className="font-bold text-slate-950">How I Work</h3>
-                        <p className="mt-3 leading-7 text-slate-600">
-                            I like clear requirements, small iterations, and code that makes the next change easier.
-                        </p>
-                    </div>
-                    <div className="rounded border border-slate-200 bg-white p-5 shadow-sm">
-                        <h3 className="font-bold text-slate-950">What I Am Growing</h3>
-                        <p className="mt-3 leading-7 text-slate-600">
-                            I am expanding my full-stack skills while keeping a strong eye on fundamentals and maintainability.
-                        </p>
-                    </div>
-                </div>
             </section>
         </div>
     );

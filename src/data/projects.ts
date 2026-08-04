@@ -2,6 +2,19 @@ import { Project } from '../types.ts';
 
 export const projects: Project[] = [
     {
+        name: 'Home Server and Homelab',
+        description: 'A self-hosted home server built with Proxmox, Tailscale, Pi-hole, Dockhand, and containerized services for private infrastructure and production-style learning.',
+        route: 'home-server-homelab',
+        stack: ['Proxmox', 'Tailscale', 'Pi-hole', 'Docker', 'Dockhand', 'Reverse Proxy'],
+        highlights: [
+            'Self-hosting services including cloud storage, a reverse proxy, password management, and cloud photo storage.',
+            'Using Tailscale and network-level tooling to make private services easier to reach and administer securely.',
+            'Expanding the homelab with a dedicated development environment for testing changes before deploying to the production stack.',
+            'Practicing infrastructure operations, service isolation, backups, and deployment discipline in a real environment.',
+        ],
+        featured: true,
+    },
+    {
         name: 'Kingsland Store',
         description: 'A full-stack shopping experience built for CS 260 at BYU with product browsing, account flows, and server-backed data.',
         route: 'kingsland',
@@ -24,7 +37,6 @@ export const projects: Project[] = [
             'Modeled character state and level growth in a way that can support new enemies and items.',
             'Kept the project modular enough to extend with additional maps, mechanics, and encounters.',
         ],
-        featured: true,
     },
     {
         name: 'Chess',

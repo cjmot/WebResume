@@ -1,20 +1,21 @@
 export const profile = {
     name: 'Cooper Motyer',
-    title: 'Computer Science Student and Software Developer',
-    location: 'Provo, UT',
+    title: 'Software Engineer and Computer Science Student',
+    location: 'Orem, UT',
     github: 'https://github.com/cjmot',
     summary:
-        'I build practical software with a focus on clear interfaces, reliable structure, and projects that teach me something real. My work so far spans React web apps, Java application design, Python game systems, and the connective tissue that turns ideas into usable products.',
+        'I build practical software across full-stack systems, infrastructure, and developer workflows. I have experience building, testing, and deploying React, Django, and Java applications, and I am growing my homelab where I practice production-minded networking and infrastructure.',
     about: [
-        'I am a computer science student at BYU who likes taking projects from the “what if?” stage into something you can actually open, test, and improve. I enjoy the point where design, product thinking, and engineering meet: the small decisions that make software easier to understand and easier to use.',
-        'My current focus is strengthening my full-stack foundation. I have been working with React, TypeScript, JavaScript, Express, Java, and Python while learning how to organize code so future features do not feel like a fight.',
-        'Outside the code itself, I am drawn to projects with a little personality: games, tools, portfolio systems, and web experiences that feel thoughtfully made. I care about steady improvement, clear communication, and building things that can grow.',
+        'I am a software engineer at BYU Library and a computer science student at BYU. I like taking projects from the “what if?” stage into something you can actually open, test, ship, and improve. I enjoy the point where design, product thinking, infrastructure, and engineering meet.',
+        'At the library, I work in a microservices environment that has exposed me to Kubernetes, Docker containers and Compose stacks, robust CI/CD pipelines, multi-stage deployments, full-stack engineering, and AI-assisted workflows. That experience has made me more interested in the systems around the code: how software gets built, validated, deployed, and maintained.',
+        'Outside work, I\'ve built a home server stack with Proxmox, Tailscale, Pi-hole, Dockhand and reverse proxying, where I host services such as a password manager, cloud file and photo storage, and a git server.',
     ],
     strengths: [
         'Full-stack web development',
-        'Object-oriented design',
-        'Project architecture',
-        'Interactive user experiences',
-        'Fast learning and iteration',
+        'Microservices architecture',
+        'Docker and Kubernetes',
+        'CI/CD and deployments',
+        'Homelab infrastructure',
+        'AI-assisted workflows',
     ],
 };

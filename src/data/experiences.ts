@@ -2,6 +2,24 @@ import { Experience } from '../types.ts'
 
 export const experiences: Experience[] = [
     {
+        name: 'Software Engineer',
+        role: 'Software Engineer',
+        organization: 'BYU Library',
+        period: 'Present',
+        location: 'Provo, UT',
+        description: 'Working in a microservices architecture across full-stack systems, infrastructure, deployment workflows, and AI-assisted engineering practices.',
+        route: 'byu-library-software-engineer',
+        link: 'https://lib.byu.edu/',
+        skills: ['Kubernetes', 'Docker', 'CI/CD', 'Microservices', 'Full-Stack Engineering', 'AI Workflows'],
+        highlights: [
+            'Gaining hands-on experience with Kubernetes, containerized services, Docker Compose stacks, and multi-stage deployment workflows.',
+            'Working within robust CI/CD pipelines that support reliable build, validation, and release processes.',
+            'Contributing across full-stack engineering surfaces while learning how production microservices are operated and maintained.',
+            'Using AI-assisted workflows to accelerate development while keeping engineering judgment and code quality central.',
+        ],
+        featured: true,
+    },
+    {
         name: 'Student Software Developer',
         role: 'Computer Science Coursework',
         organization: 'Brigham Young University',
@@ -32,7 +50,6 @@ export const experiences: Experience[] = [
             'Built backend endpoints to support dynamic application behavior.',
             'Iterated on styling, routing, and deployment concerns in a complete web app.',
         ],
-        featured: true,
     },
     {
         name: 'Java Application Developer',
@@ -48,6 +65,5 @@ export const experiences: Experience[] = [
             'Implemented validation paths for legal movement and game flow.',
             'Balanced correctness with readable code organization for a larger coursework project.',
         ],
-        featured: true,
     },
 ];
