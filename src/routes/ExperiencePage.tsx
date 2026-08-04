@@ -7,9 +7,6 @@ export default function ExperiencePage() {
             <div className="mb-8 max-w-3xl">
                 <p className="text-sm font-semibold uppercase text-teal-700">Resume</p>
                 <h1 className="mt-2 text-4xl font-bold text-slate-950">Experience</h1>
-                <p className="mt-4 leading-7 text-slate-600">
-                    A focused record of coursework, applied software projects, and the technologies I have used to build them.
-                </p>
             </div>
             <div className="space-y-5">
                 {experiences.map((experience) => (
