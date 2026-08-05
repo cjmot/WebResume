@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    @apply bg-stone-50 text-slate-800 antialiased;
+}
+
+#root {
+    min-height: 100vh;
+}
