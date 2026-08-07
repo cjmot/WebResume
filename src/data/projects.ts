@@ -18,6 +18,7 @@ export const projects: Project[] = [
         name: 'Tweeter Clone',
         description: 'A full-stack Twitter-style social app with a React frontend, shared TypeScript models, and an AWS serverless backend for auth, follows, feeds, stories, and status posting.',
         route: 'tweeter-clone',
+        link: 'https://github.com/cjmot/tweeter-clone',
         stack: ['React', 'TypeScript', 'AWS Lambda', 'DynamoDB', 'S3', 'SQS'],
         highlights: [
             'Built across a multi-package TypeScript codebase with separate web, shared model, and server modules.',
@@ -59,8 +60,8 @@ export const projects: Project[] = [
         stack: ['TypeScript', 'React', 'Tailwind CSS', 'Vite'],
         highlights: [
             'Created a personal site that can grow as new projects and experience are added.',
-            'Separated content from presentation so resume entries are easy to maintain.',
-            'Refined the interface toward a focused, resume-first reading experience.',
+            'Created an automated deployment pipeline with GitHub Actions to build and deploy the site to GitHub Pages.',
+            'Created a mirrored repository on my personal git server to allow for private development and testing of new features.',
         ],
     },
 ];
