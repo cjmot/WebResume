@@ -1,30 +1,84 @@
-# React + TypeScript + Vite
+# WebResume
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A responsive, data-driven portfolio and resume site for Cooper Motyer. It presents professional experience, selected projects, and a short personal profile through a small React single-page application.
 
-Currently, two official plugins are available:
+[View the live site](https://cjmot.github.io/WebResume/)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Highlights
 
-## Expanding the ESLint configuration
+- Dedicated pages for the profile, experience, and project portfolio
+- Detail routes generated from typed experience and project data
+- Featured content surfaced automatically on the home page
+- Responsive navigation and layouts for mobile and desktop
+- Static production build suitable for GitHub Pages
+- Automated deployment from the `main` branch with GitHub Actions
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Built with
 
-- Configure the top-level `parserOptions` property like this:
+- [React](https://react.dev/) and [React Router](https://reactrouter.com/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Vite](https://vite.dev/)
+- [Tailwind CSS](https://tailwindcss.com/)
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
+## Getting started
+
+### Prerequisites
+
+- [Node.js](https://nodejs.org/) 22 or newer
+- npm (included with Node.js)
+
+### Run locally
+
+```bash
+git clone https://github.com/cjmot/WebResume.git
+cd WebResume
+npm ci
+npm run dev
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+The development server runs at [http://localhost:3000](http://localhost:3000).
+
+## Available commands
+
+| Command | Description |
+| --- | --- |
+| `npm run dev` | Start the Vite development server on port 3000. |
+| `npm run build` | Type-check the application and create a production build in `dist/`. |
+| `npm run lint` | Check TypeScript and React files with ESLint. |
+| `npm run preview` | Serve the production build locally for a final review. |
+
+## Project structure
+
+```text
+src/
+├── components/         # Shared navigation and detail views
+├── data/               # Profile, experience, and project content
+├── routes/             # Top-level pages
+├── App.tsx             # Router and generated detail routes
+├── index.css           # Tailwind layers and global styles
+├── main.tsx            # Application entry point
+└── types.ts            # Shared content types
+```
+
+## Updating the portfolio
+
+Most portfolio content is separated from the presentation components:
+
+- Edit `src/data/profile.ts` to update the name, summary, links, biography, or strengths.
+- Add or edit entries in `src/data/experiences.ts` for work and education.
+- Add or edit entries in `src/data/projects.ts` for portfolio projects.
+
+Experience and project entries use the interfaces in `src/types.ts`. Each entry needs a unique `route` value; the app uses it to generate the corresponding detail URL. Set `featured: true` to make an item eligible for the home page. The home page shows up to two featured experiences and three featured projects.
+
+## Deployment
+
+The workflow in `.github/workflows/ci.yml` builds and deploys the site to GitHub Pages whenever a commit reaches `main`. It also copies `index.html` to `404.html`, allowing client-side routes to load correctly when opened directly.
+
+The Vite base path is currently `/WebResume/`. If the repository name or hosting path changes, update `base` in `vite.config.ts` before deploying.
+
+To verify a production build locally:
+
+```bash
+npm run build
+npm run preview
+```
