@@ -57,6 +57,16 @@ export default function ProjectDescription({ project }: { project: Project }) {
                             View Repository
                         </a>
                     )}
+                    {project.demoLink && (
+                        <a
+                            href={project.demoLink}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="rounded border border-teal-700 bg-teal-700 px-5 py-3 text-sm font-semibold text-white transition hover:border-slate-950 hover:bg-slate-950"
+                        >
+                            View Demo Site
+                        </a>
+                    )}
                     <Link
                         to="/projects"
                         className="rounded border border-slate-300 px-5 py-3 text-sm font-semibold text-slate-800 transition hover:border-slate-950 hover:text-slate-950"

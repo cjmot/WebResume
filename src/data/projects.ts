@@ -19,6 +19,7 @@ export const projects: Project[] = [
         description: 'A full-stack Twitter-style social app with a React frontend, shared TypeScript models, and an AWS serverless backend for auth, follows, feeds, stories, and status posting.',
         route: 'tweeter-clone',
         link: 'https://github.com/cjmot/tweeter-clone',
+        demoLink: 'https://cjmot.github.io/tweeter-clone/',
         stack: ['React', 'TypeScript', 'AWS Lambda', 'DynamoDB', 'S3', 'SQS'],
         highlights: [
             'Built across a multi-package TypeScript codebase with separate web, shared model, and server modules.',
@@ -53,7 +54,7 @@ export const projects: Project[] = [
         featured: true,
     },
     {
-        name: 'Resume Portfolio Site',
+        name: 'This Portfolio Website',
         description: 'This portfolio site: a Vite, TypeScript, React, and Tailwind project structured around reusable resume data and built with the assistance of AI tools to accelerate development.',
         route: 'other-portfolio',
         link: 'https://github.com/cjmot/WebResume',

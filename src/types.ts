@@ -18,6 +18,7 @@ export interface Project {
     description: string;
     route: string;
     link?: string;
+    demoLink?: string;
     stack: string[];
     highlights: string[];
     featured?: boolean;
