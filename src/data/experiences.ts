@@ -34,6 +34,7 @@ export const experiences: Experience[] = [
             'Implemented a RESTful API for managing appointments and times with a 3rd party integration for the appointment data.',
             'Utilized an organization-wide design system to ensure consistent styling and user experience.',
         ],
+        featured: true,
     },
     {
         name: 'BS in Computer Science, SWE Emphasis',
