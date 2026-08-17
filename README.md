@@ -10,7 +10,7 @@ A responsive, data-driven portfolio and resume site for Cooper Motyer. It presen
 - Detail routes generated from typed experience and project data
 - Featured content surfaced automatically on the home page
 - Responsive navigation and layouts for mobile and desktop
-- Static production build suitable for GitHub Pages
+- Static production build suitable for Cloudflare Pages
 - Automated deployment from the `main` branch with GitHub Actions
 
 ## Built with
@@ -72,13 +72,28 @@ Experience and project entries use the interfaces in `src/types.ts`. Each entry 
 
 ## Deployment
 
-The workflow in `.github/workflows/ci.yml` builds and deploys the site to GitHub Pages whenever a commit reaches `main`. It also copies `index.html` to `404.html`, allowing client-side routes to load correctly when opened directly.
+The workflow in `.github/workflows/ci.yml` builds and deploys the site to Cloudflare Pages whenever a commit reaches `main`.
 
-The Vite base path is currently `/WebResume/`. If the repository name or hosting path changes, update `base` in `vite.config.ts` before deploying.
+### One-time setup
+
+1. Create a Cloudflare Pages project.
+2. In GitHub, add these repository secrets:
+	- `CLOUDFLARE_API_TOKEN`
+	- `CLOUDFLARE_ACCOUNT_ID`
+	- `CLOUDFLARE_PROJECT_NAME`
+3. Ensure the Cloudflare API token has permission to deploy Pages projects.
+
+Client-side routing is handled through `public/_redirects`, which rewrites all paths to `index.html`.
 
 To verify a production build locally:
 
 ```bash
 npm run build
 npm run preview
+```
+
+Deploy command:
+
+```bash
+git push origin main
 ```

@@ -23,5 +23,5 @@ export default defineConfig({
         minify: false,
         cssCodeSplit: false
     },
-    base: '/portfolio-site/',
+    base: '/',
 })
