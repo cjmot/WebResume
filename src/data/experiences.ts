@@ -9,7 +9,6 @@ export const experiences: Experience[] = [
         location: 'Provo, UT',
         description: 'Working in a microservices architecture across full-stack systems, infrastructure, deployment workflows, and AI-assisted engineering practices.',
         route: 'byu-library-software-engineer',
-        link: 'https://lib.byu.edu/',
         skills: ['Kubernetes', 'Docker', 'CI/CD', 'Microservices', 'Full-Stack Engineering', 'AI Workflows'],
         highlights: [
             'Gaining hands-on experience with Kubernetes, containerized services, Docker Compose stacks, and multi-stage deployment workflows.',
@@ -27,7 +26,6 @@ export const experiences: Experience[] = [
         location: 'Provo, UT',
         description: 'Developed and maintained web applications for the Missionary Training Center using React, TypeScript, and tailwind frontend, and Express backend with RESTful APIs.',
         route: 'full-stack-web-dev',
-        link: 'https://github.com/cjmot/startup',
         skills: ['React', 'JavaScript', 'Express', 'APIs'],
         highlights: [
             'Created the main appointment scheduling page, including a calendar integration and appointment views and management.',
@@ -44,7 +42,6 @@ export const experiences: Experience[] = [
         location: 'Provo, UT',
         description: 'Building practical software projects through BYU computer science coursework, with an emphasis on full-stack development, data structures, and clean object-oriented design.',
         route: 'byu-coursework',
-        link: 'https://www.byu.edu/',
         skills: ['React', 'TypeScript', 'Java', 'Python', 'Express'],
         highlights: [
             'Built production-shaped projects across frontend, backend, and command-line environments.',
