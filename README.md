@@ -83,7 +83,7 @@ The workflow in `.github/workflows/ci.yml` builds and deploys the site to Cloudf
 	- `CLOUDFLARE_PROJECT_NAME`
 3. Ensure the Cloudflare API token has permission to deploy Pages projects.
 
-Client-side routing is handled through `public/_redirects`, which rewrites all paths to `index.html`.
+Client-side routing fallback is handled by generating `dist/404.html` from `dist/index.html` during CI builds.
 
 To verify a production build locally:
 
