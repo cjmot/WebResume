@@ -30,14 +30,16 @@ export const projects: Project[] = [
         featured: true,
     },
     {
-        name: 'Roguelike Game',
-        description: 'A Python roguelike game prototype focused on turn-based exploration, character progression, and a leveling system.',
-        route: 'roguelike-game',
-        stack: ['Python', 'Game Design', 'CLI'],
+        name: 'Scorecard',
+        description: 'A mobile-friendly scorekeeping website for tracking players, rounds, and totals across card games and other group games.',
+        route: 'scorecard',
+        link: 'https://github.com/cjmot/scorecard',
+        stack: ['React', 'TypeScript', 'Tailwind CSS', 'Vite'],
         highlights: [
-            'Designed gameplay loops around exploration, combat, and player progression.',
-            'Modeled character state and level growth in a way that can support new enemies and items.',
-            'Kept the project modular enough to extend with additional maps, mechanics, and encounters.',
+            'Built a reusable scorecard with player management, round-by-round scoring, live totals, rankings, and undo support.',
+            'Added a configurable quick scorecard for any game, including custom names, round labels, and highest- or lowest-score win conditions.',
+            'Created a dedicated Golf card-game experience that pairs game rules with tailored scoring controls.',
+            'Persisted active games and settings in local storage so players can leave and continue a session on the same device.',
         ],
     },
     {
