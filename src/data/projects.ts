@@ -41,9 +41,10 @@ export const projects: Project[] = [
             'Created a dedicated Golf card-game experience that pairs game rules with tailored scoring controls.',
             'Persisted active games and settings in local storage so players can leave and continue a session on the same device.',
         ],
+        featured: true,
     },
     {
-        name: 'Chess',
+        name: 'CLI Chess',
         description: 'A Java chess application built for CS 240 at BYU, including command-line play and full game-state validation.',
         route: 'chess',
         link: 'https://github.com/cjmot/chess',
@@ -53,7 +54,7 @@ export const projects: Project[] = [
             'Organized the code around clear domain objects for pieces, board positions, and commands.',
             'Built a reliable foundation for future UI, networking, or AI features.',
         ],
-        featured: true,
+        featured: false,
     },
     {
         name: 'This Portfolio Website',
@@ -66,5 +67,6 @@ export const projects: Project[] = [
             'Created an automated deployment pipeline with GitHub Actions to build and deploy the site to GitHub Pages.',
             'Created a mirrored repository on my personal git server to allow for private development and testing of new features.',
         ],
+        featured: false,
     },
 ];

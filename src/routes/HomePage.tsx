@@ -40,11 +40,11 @@ export default function HomePage() {
                         </div>
                         <div>
                             <dt className="font-semibold text-slate-950">Focus</dt>
-                            <dd className="text-slate-600">Full-stack web, Java applications, interactive tools</dd>
+                            <dd className="text-slate-600">Full-stack web application development and deployment</dd>
                         </div>
                         <div>
                             <dt className="font-semibold text-slate-950">Currently Building</dt>
-                            <dd className="text-slate-600">Maintainable React projects and software fundamentals</dd>
+                            <dd className="text-slate-600">Home server application stack and network, and other personal projects</dd>
                         </div>
                     </dl>
                 </aside>
